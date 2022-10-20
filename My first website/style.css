@@ -1,0 +1,150 @@
+:root {
+    --darkGreen: linear-gradient(45deg, olive, darkolivegreen, olivedrab); 
+    --lightGreen: linear-gradient(45deg, chartreuse, rgb(3, 150, 3), lawngreen);  
+    --lGreen: limegreen;
+    --dGreen: olivedrab;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+html {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+}
+
+li {
+    float: left;
+    flex-grow: 1;
+    padding: 8px;
+    
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color:darkolivegreen;
+}
+
+.active {
+    background-color:rgba(44, 44, 44, 0.548);
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family:Arial, Helvetica, sans-serif
+}
+
+h1 {
+    text-shadow: 3px 3px 1px darkolivegreen;
+}
+
+h3 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+    height: 3px;
+    background-color: darkslategray;
+    margin-bottom: 15px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 0;
+    height: 2px;
+}
+
+p {
+    text-align: center;
+}
+
+.about-content img {
+    object-fit: cover; 
+    object-position: 0 30%; 
+    border-radius: 50px; 
+    display: block; 
+    margin-right: 30px;
+    margin-top: 30px;
+    width: 300px;
+    height: 400px;
+    float: right;
+
+}
+
+/*** portfolio.html ***/
+.photoGal img {
+width: 80%;
+display: block;
+margin: auto;
+}
+
+footer {
+    background-color: #000;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.btn {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    font-weight: 700;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+}
+
+.light-theme {
+    --bg: var(--lightGreen);
+    --fontColor: var(--black);
+    --btnBg: var(--dGreen);
+    --btnFontColor: var(--black);
+}
+
+.dark-theme {
+    --bg: var(--darkGreen);
+    --fontColor: var(--black);
+    --btnBg: var(--lGreen);
+    --btnFontColor: var(--black);
+}
+
+
+
+.hover {
+    transform: scale(2);
+}
