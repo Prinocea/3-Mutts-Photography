@@ -1,0 +1,225 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --darkGreen: linear-gradient(45deg, olive, darkolivegreen, olivedrab); 
+    --lightGreen: linear-gradient(45deg, chartreuse, rgb(3, 150, 3), lawngreen);  
+    --lGreen: limegreen;
+    --dGreen: olivedrab;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+html {
+    height: 100vw;
+}
+
+/*************************** Nav Bar ***********************/
+
+ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+}
+
+li {
+    float: left;
+    flex-grow: 1;
+    padding: 8px;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color:darkolivegreen;
+}
+
+.active {
+    background-color:rgba(44, 44, 44, 0.548);
+}
+
+/***************************** End Nav Bar *****************************/
+
+body {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family:Arial, Helvetica, sans-serif;
+    background-repeat: none; 
+}
+
+/******************* theme swap light/dark ******************/
+.light-theme {
+    --bg: var(--lightGreen);
+    --fontColor: var(--black);
+    --btnBg: var(--dGreen);
+    --btnFontColor: var(--black);
+    background-repeat: none;
+}
+
+.dark-theme {
+    --bg: var(--darkGreen);
+    --fontColor: var(--black);
+    --btnBg: var(--lGreen);
+    --btnFontColor: var(--black);
+    background-repeat: none;
+}
+
+.hover {
+    transform: scale(2); 
+}
+
+.btn {
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    border: none;
+    font-weight: 700;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+}
+
+/******************* end theme swap light/dark ******************/
+
+h1 {
+    text-shadow: 3px 2px 1px darkolivegreen;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+hr {
+    height: 3px;
+    background-color: darkslategray;
+    margin-bottom: 15px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 0;
+    height: 2px;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    grid-template-areas: "item1 item2 item2 item3"
+    ". item4 item4 ."
+    "item5 item5 item6 item6";
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-item {
+    text-align: center;
+
+}
+
+.item-1 {
+    grid-area: item1;
+}
+
+.logo {
+    max-width: 50%;
+    max-height: 100%;
+}
+
+.item-2 {
+    grid-area: item2;
+}
+
+.item-3 {
+    grid-area: item3;
+    place-self: center;
+}
+
+.item-4 {
+    grid-area: item4;
+}
+
+.item-5 {
+    grid-area: item5;
+}
+
+.item-6 {
+    grid-area: item6;
+}
+
+/*************** home pg ***************/
+
+.home5 {
+    background-color: #ffffff63;
+    height: 500px;
+    margin: 10px;
+}
+
+.home6 {
+    background-color: #ffffff63;
+    height: 500px;
+    margin: 10px;
+}
+
+/*************** end home pg ***************/
+
+/***** about page *****/
+/*** need to learn how to make the columns "item1 item2 item2 item3"
+    "item5 item5 item5 item6" only for this page ***/
+
+.about-img {
+    object-fit: cover; 
+    border-radius: 50px; 
+    margin: 30px;
+    width: 300px;
+    height: 400px;
+    float: right;
+}
+
+.about-text {
+    padding: 60px 30px;
+}
+
+/*********** GALLERY *************/
+
+.gallery-img {
+    max-width: 100%;
+    max-height: auto;
+}
+
+.imgZoe {
+    padding: 5px 0px 5px 10px;
+}
+
+.imgTy {
+    padding: 100px 10px;
+}
+
+/*********** END GALLERY *************/
+
+/******************* footer ******************/
+footer {
+    background-color: #000;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+/******************* end footer ******************/
